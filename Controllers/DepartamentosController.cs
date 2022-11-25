@@ -10,15 +10,14 @@ namespace _3_Examen.Controllers;
  
     [ApiController]
     [Route("departamentos")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "EsAdmin")]
 
-    public class JuegosController : ControllerBase
+    public class DepartamentosController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
         private readonly IMapper mapper;
         private readonly IConfiguration configuration;
 
-        public JuegosController(ApplicationDbContext context, IMapper mapper, IConfiguration configuration)
+        public DepartamentosController(ApplicationDbContext context, IMapper mapper, IConfiguration configuration)
         {
             this.dbContext = context;
             this.mapper = mapper;
